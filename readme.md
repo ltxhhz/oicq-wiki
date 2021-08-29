@@ -1,3 +1,3 @@
 # oicq.wiki
 
-使用[vuepress](https://vuepress.vuejs.org/zh/)开发的[oicq](https://github.com/takayama-lily/oicq)文档
+使用[vuepress](https://vuepress.vuejs.org/zh/)开发的**oicq**([github](https://github.com/takayama-lily/oicq),[gitee](https://gitee.com/takayama/oicq))文档

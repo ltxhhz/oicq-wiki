@@ -74,7 +74,7 @@ client.setGroupBan(gid, uid, 3600) //禁言
 
 ## **其他**
 
-* [常见问题](./杂七杂八.html) (登录、风控等相关问题)
-* [awesome](./awesome.html) 社区相关应用收集
-* [QQWebApi](./web-api.html) QQ Web Api 收集
+* [常见问题](./杂七杂八.md) (登录、风控等相关问题)
+* [awesome](./awesome.md) 社区相关应用收集
+* [QQWebApi](./web-api.md) QQ Web Api 收集
   
