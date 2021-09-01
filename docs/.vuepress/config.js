@@ -4,6 +4,7 @@ module.exports = {
   title: 'oicq',
   description: 'oicq 项目文档',
   dest:'./src',
+  // base:'/oicq-wiki/',
   clientRootMixin: path.resolve(__dirname, 'mixin.js'),
   head: [
     ['link', { rel: 'icon', href: 'takayama.png' }]
