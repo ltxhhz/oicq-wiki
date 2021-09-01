@@ -1,7 +1,10 @@
 const back2top = require('@vuepress/plugin-back-to-top')
+const path = require('path')
 module.exports = {
   title: 'oicq',
   description: 'oicq 项目文档',
+  dest:'./src',
+  clientRootMixin: path.resolve(__dirname, 'mixin.js'),
   head: [
     ['link', { rel: 'icon', href: 'takayama.png' }]
   ],
@@ -17,7 +20,6 @@ module.exports = {
       title: '教程',
       path: '/',
       children: [
-        '/event',
         '/杂七杂八',
         ['/awesome', '社区相关应用'],
         '/web-api'
@@ -30,6 +32,17 @@ module.exports = {
         '/api/成员属性.md',
         '/api/系统类api.md',
         '/api/应用类api.md'
+      ]
+    },{
+      title: '事件',
+      path: '/event',
+      children: [
+        '/event/system.md',
+        '/event/message.md',
+        '/event/request.md',
+        '/event/notice.md',
+        '/event/sync.md',
+        '/event/internal.md',
       ]
     }],
   },

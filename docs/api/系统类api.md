@@ -4,9 +4,9 @@
 
 >登录，传密码则使用密码登录，不传则扫码登录，或通过设备锁验证
 
-|参数|类型|默认|必需|说明|
-:--:|:-:|:--:|:-:|-
-password|Uint8Array \| String|`undefined`||明文或md5后的密码
+|参数|类型|默认|说明|
+:--:|:-:|:--:|-
+password?|Uint8Array \| String|`undefined`|明文或md5后的密码
 
 ## Client.logout()
 
@@ -26,9 +26,9 @@ password|Uint8Array \| String|`undefined`||明文或md5后的密码
 
 >提交滑动验证码ticket
 
-|参数|类型|默认|必需|说明|
-:--:|:-:|:--:|:-:|-
-ticket|string||√|滑动验证码ticket
+|参数|类型|默认|说明|
+:--:|:-:|:--:|-
+ticket|string||滑动验证码ticket
 
 ## Client.sendSMSCode()
 
@@ -38,6 +38,6 @@ ticket|string||√|滑动验证码ticket
 
 >提交收到的短信验证码
 
-|参数|类型|默认|必需|说明|
-:--:|:-:|:--:|:-:|-
-code|string||√|短信验证码
+|参数|类型|默认|说明|
+:--:|:-:|:--:|-
+code|string||短信验证码
