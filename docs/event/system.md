@@ -1,4 +1,4 @@
-# 系统类
+# system
 
 ## `system.login.qrcode`
 
