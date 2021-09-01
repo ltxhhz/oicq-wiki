@@ -13,7 +13,8 @@ module.exports = {
   head: [['link', {
     rel: 'icon',
     href: 'takayama.png'
-  }]],
+  }] // ['link', { rel: 'icon', href: 'oicq-wiki/takayama.png' }]
+  ],
   themeConfig: {
     nav: [{
       text: 'github',
