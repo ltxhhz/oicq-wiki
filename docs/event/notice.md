@@ -210,7 +210,7 @@ group_id|number||群号
 operator_id|number||旧群主
 user_id|number||新群主
 
-## `notice.group.title`<Badge text="未实现" type="warn"/>
+## `notice.group.title` <Badge text="未实现" type="warn"/>
 
 > 群头衔变更事件
 
