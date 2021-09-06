@@ -708,7 +708,7 @@ reject_add_request?|boolean|``|不再接收其群请求
 
 ### Client.setGroupBan(group_id, user_id, duration)
 
->禁言
+>禁言，时间为0则取消禁言
 
 |参数|类型|默认|说明|
 :-:|:-:|:-:|-

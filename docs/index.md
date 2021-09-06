@@ -1,4 +1,25 @@
+<script>
+  export default {
+  mounted(){
+    //访问次数统计
+    fetch("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js")
+      .then(value => {
+        let bsz = document.createElement("script")
+        value.text().then(str => {
+          bsz.innerText = str
+          busuanzi_container_site_pv.parentElement.appendChild(bsz)
+        })
+      })
+      .catch(err=>{
+        console.error(err)
+      })
+  }
+}
+</script>
+
 # 简介
+
+<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
 
 [![npm version](https://img.shields.io/npm/v/oicq.svg?logo=npm)](https://www.npmjs.com/package/oicq)
 [![dm](https://shields.io/npm/dm/oicq)](https://www.npmjs.com/package/oicq)

@@ -2,3 +2,7 @@ blockquote {
   border-color: #42b983;
   color: inherit;
 }
+#busuanzi_container_site_pv,
+#busuanzi_value_site_pv {
+  color: #42b983;
+}
