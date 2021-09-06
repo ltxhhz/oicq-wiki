@@ -13,7 +13,8 @@ module.exports = {
   head: [['link', {
     rel: 'icon',
     href: 'takayama.png'
-  }]],
+  }] // ['script', { async: '', src:'https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'}]
+  ],
   themeConfig: {
     nav: [{
       text: 'github',

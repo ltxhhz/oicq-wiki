@@ -2,17 +2,13 @@
   export default {
   mounted(){
     //访问次数统计
-    fetch("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js")
-      .then(value => {
-        let bsz = document.createElement("script")
-        value.text().then(str => {
-          bsz.innerText = str
-          busuanzi_container_site_pv.parentElement.appendChild(bsz)
-        })
-      })
-      .catch(err=>{
-        console.error(err)
-      })
+    let bsz = document.createElement("script")
+    bsz.src ="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+    bsz.async=true
+    bsz.onerror=function(){
+      busuanzi_value_site_pv.innerText="(获取失败)"
+    }
+    busuanzi_container_site_pv.parentElement.appendChild(bsz)
   }
 }
 </script>
