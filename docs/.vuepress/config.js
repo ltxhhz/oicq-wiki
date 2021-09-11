@@ -12,6 +12,7 @@ module.exports = {
   ],
   themeConfig: {
     nav: [
+      { text: '文档项目', link:'https://github.com/ltxhhz/oicq-wiki'},
       { text: 'github', link: 'https://github.com/takayama-lily/oicq', target: '_blank' },
       { text: 'gitee', link: 'https://gitee.com/takayama/oicq', target: '_blank' },
       { text: 'QQ群', link: 'https://qm.qq.com/cgi-bin/qm/qr?k=NXw3NEA5lzPjkRhyEpjVBqMpdg1WHRKJ&jump_from=webapi', target: '_blank' },
@@ -31,7 +32,6 @@ module.exports = {
       title: 'api',
       path: '/api',
       children: [
-        '/api/成员属性.md',
         '/api/系统类api.md',
         '/api/应用类api.md'
       ]
@@ -45,6 +45,12 @@ module.exports = {
         '/event/notice.md',
         '/event/sync.md',
         '/event/internal.md',
+      ]
+    },{
+      title:'http-api',
+      path:'/http-api',
+      children:[
+        '/http-api/null.md'
       ]
     }],
   },

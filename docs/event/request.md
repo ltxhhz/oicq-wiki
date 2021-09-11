@@ -1,5 +1,7 @@
 # request
 
+[[toc]]
+
 ## `request.friend.add`
 
 > 收到好友申请事件
@@ -17,7 +19,7 @@ sub_type|string|`"add"` \| `"single"`| 加好友请求
 comment|string|| 附加信息
 source|string|| 来源(如"条件查找")
 age|number||年龄
-sex|[Gender](../api/成员属性.md#gender)||性别
+sex|[Gender](../api/index.md#gender)||性别
 
 ## `request.friend.single`
 
@@ -69,7 +71,7 @@ request_type|string|`"group"`|
 sub_type|string|`"invite"`| 群邀请
 group_id|number||群号
 group_name|string||群名
-role|[GroupRole](../api/成员属性.md#grouprole)|| 邀请者权限
+role|[GroupRole](../api/index.md#grouprole)|| 邀请者权限
 
 ## `request.group`
 

@@ -1,5 +1,7 @@
 # message
 
+[[toc]]
+
 ## `message.private.friend`
 
 > 好友消息事件
@@ -14,7 +16,7 @@
 :--:|:-:|:--:|-
 message_type|string|`"private"`| 私聊消息
 sub_type|string|`"friend"` \| `"group"` \| `"single"` \| `"other"` \| `"self"`|
-sender|[FriendInfo](../api/成员属性.md#friendinfo)||
+sender|[FriendInfo](../api/index.md#friendinfo)||
 auto_reply|boolean|| 是否自动回复
 
 ## `message.private.group`
@@ -69,7 +71,7 @@ sub_type|string|`"normal"` \| `"anonymous"`|
 group_id|number||
 group_name|string||
 anonymous|[Anonymous](../api/应用类api.md#anonymous) \| `null`||匿名消息
-sender|[MemberBaseInfo](../api/成员属性.md#memberbaseinfo)||
+sender|[MemberBaseInfo](../api/index.md#memberbaseinfo)||
 atme|boolean||
 seqid|number||
 block|boolean|| 是否已屏蔽
@@ -79,14 +81,14 @@ block|boolean|| 是否已屏蔽
 > 匿名群消息事件
 
 **回调参数**:
-[GroupMessageEventData](#groupinviteeventdata)
+[GroupMessageEventData](#groupmessageeventdata)
 
 ## `message.group`
 
 > 群消息系列事件
 
 **回调参数**:
-[GroupMessageEventData](#groupinviteeventdata)
+[GroupMessageEventData](#groupmessageeventdata)
 
 ## `message.discuss`
 

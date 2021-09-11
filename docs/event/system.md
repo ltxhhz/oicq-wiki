@@ -1,5 +1,7 @@
 # system
 
+[[toc]]
+
 ## `system.login.qrcode`
 
 > 扫码登录收到二维码事件

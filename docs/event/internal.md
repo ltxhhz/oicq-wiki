@@ -1,5 +1,7 @@
 # internal
 
+[[toc]]
+
 ## `internal.sso` <Badge text="实验性" type="warn"/>
 
 > 实验性事件: 监听所有收到的包(已解密)

@@ -28,16 +28,18 @@
 * QQ(安卓)协议基于Node.js的实现，使用CQHTTP风格的API
 * 高度抽象地封装了大部分常用功能
 * 若你不熟悉Node.js或不会组织代码，可通过 [template](https://github.com/takayama-lily/oicq-template) 创建一个简单的应用程序
-  
+
 ---
 
-## **安装**
+[[toc]]
+
+## 安装
 
 ```bash
 > npm i oicq  # or > yarn add oicq
 ```
 
-## **用法**
+## 用法
 
 ```js
 const { createClient } = require("oicq");
@@ -79,7 +81,7 @@ client.on("system.login.slider", function (event) { //监听滑动验证码事�
 }).login("password"); //需要填写密码或md5后的密码
 ```
 
-## **常用功能**
+## 常用功能
 
 ```js
 client.sendGroupMsg(gid, "hello") //群聊
@@ -89,7 +91,16 @@ client.setGroupKick(gid, uid) //踢人
 client.setGroupBan(gid, uid, 3600) //禁言
 ```
 
-## **其他**
+## http-api
+
+> 可作为 [http-api](./http-api/index.md) 或调试程序使用
+
+```bash
+> npm i -g oicq
+> oicq <account>
+```
+
+## 其他
 
 * [常见问题](./杂七杂八.md) (登录、风控等相关问题)
 * [awesome](./awesome.md) 社区相关应用收集

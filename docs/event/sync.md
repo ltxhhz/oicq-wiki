@@ -1,5 +1,7 @@
 # sync
 
+[[toc]]
+
 ## `sync.message`
 
 > 同账号其他客户端发送私聊事件
@@ -31,7 +33,7 @@ sync_type|string|`"message"`| 同步其他客户端发送的私聊
 post_type|string|`"sync"`|
 sync_type|string|`"profile"`| 同步个人资料
 nickname?|string||昵称
-sex?|[Gender](../api/成员属性.md#gender)||性别
+sex?|[Gender](../api/index.md#gender)||性别
 age?|number||年龄
 signature?|string||个性签名
 description?|string||个人说明

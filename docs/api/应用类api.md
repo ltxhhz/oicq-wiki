@@ -27,7 +27,7 @@ group_id|number||群号
 no_cache?|boolean|`false`|是否不使用缓存数据
 
 **返回值**
-`Promise`&lt;[Ret](#ret-object)&lt;[GroupInfo](./成员属性.md#groupinfo)&gt;&gt;
+`Promise`&lt;[Ret](#ret-object)&lt;[GroupInfo](./index.md#groupinfo)&gt;&gt;
 
 ### Client.getGroupMemberList(group_id, no_cache)
 
@@ -39,7 +39,7 @@ group_id|number||群号
 no_cache?|boolean|`false`|是否不使用缓存数据
 
 **返回值**
-`Promise`&lt;[Ret](#ret-object)&lt;`Map`&lt;number, [MemberInfo](./成员属性.md#memberinfo)&gt;&gt;&gt;
+`Promise`&lt;[Ret](#ret-object)&lt;`Map`&lt;number, [MemberInfo](./index.md#memberinfo)&gt;&gt;&gt;
 
 ### Client.getGroupMemberInfo(group_id, user_id, no_cache)
 
@@ -52,7 +52,7 @@ user_id|number||QQ号
 no_cache?|boolean|`false`|是否不使用缓存数据
 
 **返回值**
-`Promise`&lt;[Ret](#ret-object)&lt;[MemberInfo](./成员属性.md#memberinfo)&gt;&gt;
+`Promise`&lt;[Ret](#ret-object)&lt;[MemberInfo](./index.md#memberinfo)&gt;&gt;
 
 ### Client.getStrangerInfo(user_id, no_cache)
 
@@ -64,9 +64,9 @@ group_id|number||群号
 no_cache?|boolean|`false`|是否不使用缓存数据
 
 **返回值**
-`Promise`&lt;[Ret](#ret-object)&lt;[StrangerInfo](./成员属性.md#strangerinfo)&gt;&gt;
+`Promise`&lt;[Ret](#ret-object)&lt;[StrangerInfo](./index.md#strangerinfo)&gt;&gt;
 
-### Client.getFriendList()  <Badge text="弃用" type="warn"/>
+### Client.getFriendList() <Badge text="弃用" type="warn"/>
 
 >获取好友列表
 :::warning 注意
@@ -108,7 +108,7 @@ no_cache?|boolean|`false`|是否不使用缓存数据
 :::
 
 **返回值**
-[Ret](#ret-object)&lt;[StrangerInfo](./成员属性.md#strangerinfo)&gt;
+[Ret](#ret-object)&lt;[StrangerInfo](./index.md#strangerinfo)&gt;
 
 ## 消息相关
 
@@ -119,7 +119,7 @@ no_cache?|boolean|`false`|是否不使用缓存数据
 |参数|类型|默认|说明|
 :-:|:-:|:-:|-
 user_id|number||QQ号
-message|[MessageElem](#messageelem)\|Iterable&lt;[MessageElem](#messageelem)&gt;\| string||消息内容
+message|[MessageElem](#messageelem)\|Iterable&lt;[MessageElem](#messageelem)\| string&gt;\| string||消息内容
 auto_escape?|boolean|`false`|unknown
 
 **返回值**
@@ -136,7 +136,7 @@ message_id|string|消息id
 |参数|类型|默认|说明|
 :-:|:-:|:-:|-
 group_id|number||群号
-message|[MessageElem](#messageelem) \| Iterable&lt;[MessageElem](#messageelem)&gt; \| string||消息内容
+message|[MessageElem](#messageelem) \| Iterable&lt;[MessageElem](#messageelem)\| string&gt; \| string||消息内容
 auto_escape?|boolean|`false`|unknown
 
 **返回值**
@@ -149,7 +149,7 @@ auto_escape?|boolean|`false`|unknown
 |参数|类型|默认|说明|
 :-:|:-:|:-:|-
 discuss_id|number||讨论组号
-message|[MessageElem](#messageelem) \| Iterable&lt;[MessageElem](#messageelem)&gt; \| string||消息内容
+message|[MessageElem](#messageelem) \| Iterable&lt;[MessageElem](#messageelem)\| string&gt; \| string||消息内容
 auto_escape?|boolean|`false`|unknown
 
 **返回值**
@@ -163,7 +163,7 @@ auto_escape?|boolean|`false`|unknown
 :-:|:-:|:-:|-
 group_id|number||群号
 user_id|number||QQ号
-message|[MessageElem](#messageelem) \| Iterable&lt;[MessageElem](#messageelem)&gt; \| string||消息内容
+message|[MessageElem](#messageelem) \| Iterable&lt;[MessageElem](#messageelem)\| string&gt; \| string||消息内容
 auto_escape?|boolean|`false`|unknown
 
 **返回值**
@@ -252,7 +252,7 @@ cqcode中的方法的返回值类型均为`string`，也就是cq码
 **以下方法没有前缀的均为两种类都有的方法**
 :::
 
-### .text(text)
+### .text(text) <Badge text="弃用" type="warn"/>
 
 >文本
 
@@ -573,7 +573,7 @@ sub_type|string|`"add"` \| `"single"`| //加好友请求
 comment|string| |附加信息
 source|string| |来源(如"条件查找")
 age|number||年龄
-sex|[Gender](./成员属性.md#gender)||性别
+sex|[Gender](./index.md#gender)||性别
 
 #### GroupAddEventData
 
@@ -601,7 +601,7 @@ request_type|string|`"group"`|请求类型
 sub_type|string|`"invite"`|群邀请
 group_id|number||群号
 group_name|string||群名
-role|[GroupRole](./成员属性.md#grouprole)| |邀请者权限
+role|[GroupRole](./index.md#grouprole)| |邀请者权限
 
 ## 群操作
 
@@ -779,7 +779,7 @@ file|[MediaFile](#mediafile)||媒体文件
 
 |参数|类型|默认|说明|
 :-:|:-:|:-:|-
-status|number||[在线状态](./成员属性.md#在线状态)
+status|number||[在线状态](./index.md#在线状态)
 
 **返回值**
 `Promise`&lt;[Ret](#ret-object)&gt;
@@ -917,7 +917,7 @@ times?|number|`1`|次数
 ## 群文件系统
 
 ::: warning 注意
-这里面的方法是会reject的，需要catch
+这里面的方法是会reject的，需要catch  
 node15开始，unhandledRejection默认会升级为uncaughtException导致程序退出
 :::
 
@@ -1191,7 +1191,7 @@ status|number||在线状态
 remote_ip?|number|``|服务器远程ip
 remote_port?|number|``|服务器远程端口
 msg_cnt_per_min|number||每分钟消息数
-statistics|[Statistics](./成员属性.md#statistics)||数据统计信息
+statistics|[Statistics](./index.md#statistics)||数据统计信息
 config|[ConfBot](./index.md#confbot)||实例配置
 
 ### Client.reloadFriendList()
@@ -1759,13 +1759,13 @@ raw_message|string| |字符串格式的消息
 message_id|string||消息id
 user_id|number||qq
 font|string||
-reply|function|[reply](#replymessage-auto_escape)|
+reply|function|[reply](#replymessage-auto_escape)|可直接使用这个函数回复消息
 
 #### reply(message, auto_escape)
 
 |属性|类型|值|说明|
 :--:|:-:|:--:|-
-message|[MessageElem](#messageelem) \| Iterable&lt;[MessageElem](#messageelem)&gt; \| string||
+message|[MessageElem](#messageelem) \| Iterable&lt;[MessageElem](#messageelem)\|string&gt; \| string||
 auto_escape?|boolean||
 
 **返回值**
@@ -1780,7 +1780,7 @@ auto_escape?|boolean||
 :--:|:-:|:--:|-
 message_type|string|`"private"`|私聊消息
 sub_type|string|`"friend"` \| `"group"` \| `"single"` \| `"other"` \| `"self"`|
-sender|[FriendInfo](./成员属性.md#friendinfo)||发送者
+sender|[FriendInfo](./index.md#friendinfo)||发送者
 auto_reply|boolean||是否自动回复
 
 ### GroupMessageEventData
@@ -1795,7 +1795,7 @@ sub_type|string|`"normal"` \| `"anonymous"`|类型
 group_id|number||群号
 group_name|string||群名
 anonymous|[Anonymous](#anonymous) \| null| |匿名消息
-sender|[MemberBaseInfo](./成员属性.md#memberbaseinfo)||发送者
+sender|[MemberBaseInfo](./index.md#memberbaseinfo)||发送者
 atme|boolean||
 seqid|number||
 block|boolean||是否已屏蔽

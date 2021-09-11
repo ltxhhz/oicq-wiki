@@ -17,6 +17,9 @@ module.exports = {
   ],
   themeConfig: {
     nav: [{
+      text: '文档项目',
+      link: 'https://github.com/ltxhhz/oicq-wiki'
+    }, {
       text: 'github',
       link: 'https://github.com/takayama-lily/oicq',
       target: '_blank'
@@ -42,11 +45,15 @@ module.exports = {
     }, {
       title: 'api',
       path: '/api',
-      children: ['/api/成员属性.md', '/api/系统类api.md', '/api/应用类api.md']
+      children: ['/api/系统类api.md', '/api/应用类api.md']
     }, {
       title: '事件',
       path: '/event',
       children: ['/event/system.md', '/event/message.md', '/event/request.md', '/event/notice.md', '/event/sync.md', '/event/internal.md']
+    }, {
+      title: 'http-api',
+      path: '/http-api',
+      children: ['/http-api/null.md']
     }]
   },
   plugins: ['@vuepress/last-updated', back2top],

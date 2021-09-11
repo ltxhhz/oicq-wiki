@@ -1,5 +1,7 @@
 # notice
 
+[[toc]]
+
 ## `notice.friend.increase`
 
 > 新增好友事件
@@ -136,8 +138,8 @@ group_id|number||群号
 operator_id|number||踢人者
 user_id|number||被踢者
 dismiss|boolean||是否是解散
-member?|[MemberInfo](../api/成员属性.md#memberinfo)||该群员的最后资料(有缓存时提供)
-group?|[GroupInfo](../api/成员属性.md#groupinfo)||该群的最后资料(自己被踢或群解散时提供)
+member?|[MemberInfo](../api/index.md#memberinfo)||该群员的最后资料(有缓存时提供)
+group?|[GroupInfo](../api/index.md#groupinfo)||该群的最后资料(自己被踢或群解散时提供)
 
 ## `notice.group.recall`
 
