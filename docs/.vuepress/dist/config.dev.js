@@ -40,7 +40,7 @@ module.exports = {
     sidebar: [{
       title: '教程',
       path: '/',
-      children: ['/杂七杂八', ['/awesome', '社区相关应用'], '/web-api'] // collapsable:false //保持展开
+      children: ['/杂七杂八', ['/awesome', '社区相关应用'], '/web-api', '/error-code'] // collapsable:false //保持展开
 
     }, {
       title: 'api',

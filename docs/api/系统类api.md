@@ -4,7 +4,7 @@
 
 ## Client.login(password)
 
->登录，传密码则使用密码登录，不传则扫码登录，或通过设备锁验证
+>登录，传密码则使用密码登录，不传则扫码登录
 
 |参数|类型|默认|说明|
 :--:|:-:|:--:|-
@@ -16,6 +16,26 @@ password?|Uint8Array \| String|`undefined`|明文或md5后的密码
 
 **返回值**
 `Promise<void>`
+
+## Client.captchaLogin(captcha) <Badge text="弃用" type="warn"/>
+
+> 。。。
+
+|参数|类型|默认|说明|
+:--:|:-:|:--:|-
+captcha|string||
+
+>文字验证码
+
+**返回值**
+`void`
+
+## Client.terminate()
+
+>直接关闭连接
+
+**返回值**
+`void`
 
 ## Client.isOnline()
 

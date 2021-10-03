@@ -23,7 +23,7 @@ sex|[Gender](../api/index.md#gender)||性别
 
 ## `request.friend.single`
 
-> 被添加为单向好友事件
+> 被添加为单向好友事件(对方已将你加为单向好友，可回添对方)
 
 **回调参数**:
 [FriendAddEventData](#friendaddeventdata)

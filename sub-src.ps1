@@ -6,3 +6,4 @@ git add .
 git commit -m "$($date.Month).$($date.Day)"
 git checkout -b page
 git push oicq-wiki page -f
+Write-Output ÔËĞĞ½áÊø

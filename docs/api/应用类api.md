@@ -18,8 +18,7 @@ API调用失败时你会得到一个`error`(包含`code`和`message`)
 
 ### Client.getGroupInfo(group_id, no_cache)
 
->获取群资料，该方法一般只用于强制刷新，请尽量从缓存中获取
-`client.gl.get(gid)`
+>获取群资料(该方法一般用于刷新群资料缓存，从缓存中获取直接访问 `Client.gl.get(gid)` 即可)
 
 |参数|类型|默认|说明|
 :-:|:-:|:-:|:-:|-
@@ -235,6 +234,27 @@ resid|string||转发消息id
   message: [MessageElem](#messageelem)[],
   raw_message: string,
 }&gt;&gt;&gt;
+
+### Client.makeForwardMsg(fakes, dm)
+
+>制作一个合并转发消息，得到的XmlElem可直接发送
+
+|参数|类型|默认|说明|
+:-:|:-:|:-:|-
+fakes|[FakeMessage](#fakemessage)\Iterable&lt;[FakeMessage](#fakemessage)&gt;||消息
+dm|boolean|`false`|以群模式上传图片，设为true则以私聊模式上传图片
+
+**返回值**
+`Promise`&lt;[Ret](#ret-object)&lt;[XmlElem](#xmlelem)&gt;&gt;&gt;
+
+#### FakeMessage
+
+|属性|类型|值|说明
+:--:|:-:|:-:|-
+user_id|number||qq
+message|string\|[MessageElem](#messageelem)\|Iterable&lt;[MessageElem](#messageelem)\| string&gt;||可转发的有效元素理论上只有[文字、表情、图片]，不支持CQ码
+nickname?|string||昵称
+time?|number||时间戳(秒)，默认：当前时间
 
 ****
 
@@ -1093,7 +1113,7 @@ fid|string||文件
 
 ## 其他
 
-### Client.preloadImages(files)
+### Client.preloadImages(files) <Badge text="弃用" type="warn"/>
 
 >预先上传图片以备发送
 >通常图片在发送时一并上传
@@ -1150,11 +1170,16 @@ domain?|[Domain](#domain)|``|域名
 `"qun.qq.com"`
 `"ti.qq.com"`
 
-### Client.getCsrfToken()
+### Client.getCsrfToken() <Badge text="弃用" type="warn"/>
 
 >获取CsrfToken
 :::tip 提示
 使用方法见[web-api](../web-api.md)
+:::
+
+:::warning 注意
+***已弃用***
+请直接访问 [Client](./index.md#client).cookies[[domain](#domain)]
 :::
 
 **返回值**
@@ -1171,9 +1196,14 @@ type?|`"image"\|"record"`|``|类型
 **返回值**
 `Promise`&lt;[Ret](#ret-object)&gt;
 
-### Client.getStatus()
+### Client.getStatus() <Badge text="弃用" type="warn"/>
 
 >获取在线状态和数据统计
+
+:::warning 注意
+***已弃用***
+请直接访问 [Client](./index.md#client).stat
+:::
 
 |参数|类型|默认|说明|
 :-:|:-:|:-:|-
@@ -1182,7 +1212,7 @@ type?|`"image"\|"record"`|``|类型
 **返回值**
 `Promise`&lt;[Ret](#ret-object)&lt;[Status](#status)&gt;&gt;
 
-#### Status
+#### Status <Badge text="弃用" type="warn"/>
 
 |属性|类型|默认|说明|
 :--:|:-:|:--:|-
@@ -1475,6 +1505,7 @@ message|string|错误信息
   timeout?|number|``|file为网络资源时请求超时时间
   headers?|OutgoingHttpHeaders|``|file为网络资源时请求头
   url?|string|``|资源地址，仅接收时有
+  type?|string|"image"\|"flash"\|"face"|类型
 
 ##### MediaFile
 

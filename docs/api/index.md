@@ -61,6 +61,9 @@ uin|number|登录账号
 nickname|string|昵称
 sex|string|性别
 age|number|年龄
+bkn|number|csrf token
+cookies|{[[Domain](./应用类api.md#domain)]: string}|
+sig|[Sig](#sig)|
 [online_status](#在线状态)|number|在线状态
 fl|Map\<number, [FriendInfo](#friendinfo)\>|好友列表
 sl|Map\<number, [StrangerInfo](#strangerinfo)\>|陌生人(有会话关系的非好友)列表
@@ -119,8 +122,7 @@ group_id?|number|||临时会话群号
 
 ### FriendInfo
 
->好友资料
->
+>好友资料  
 >继承于[陌生人资料](#strangerinfo)
 
 |属性|类型|默认|说明|
@@ -176,8 +178,7 @@ title|string||头衔
 
 ### MemberInfo
 
->群员资料
->
+>群员资料  
 >继承于[群员基础资料](#memberbaseinfo)
 
 |属性|类型|默认|说明|
@@ -205,6 +206,25 @@ sent_pkt_cnt|number||发送包总数
 lost_pkt_cnt|number||丢包总数
 recv_msg_cnt|number||收到消息总数
 sent_msg_cnt|number||发送消息总数
+msg_cnt_per_min|number||每分钟消息数
+remote_ip|string||远程ip
+remote_port|number||远程接口
+
+### sig
+|属性|类型|默认|说明|
+:--:|:-:|:--:|-
+srm_token|Buffer||
+tgt|Buffer||
+tgt_key|Buffer||
+st_key|Buffer||
+st_web_sig|Buffer||
+skey|Buffer||
+d2|Buffer||
+d2key|Buffer||
+sig_key|Buffer||
+ticket_key|Buffer||
+device_token?|Buffer||
+emp_time|number||
 
 ### log_level的合法值
 
