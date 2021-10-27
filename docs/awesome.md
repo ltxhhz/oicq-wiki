@@ -6,7 +6,7 @@
 
 ----
 
-* [abot](https://github.com/takayama-lily/oicq) 一个多账号插件式机器人框架
+* [abot](https://github.com/takayama-lily/abot) 一个多账号插件式机器人框架
 * [Steve-xmh/neonbot](https://github.com/Steve-xmh/neonbot) abot的加强版，使用多线程隔离了插件，更加稳定
 * [node-onebot](https://github.com/takayama-lily/node-onebot) Http API (使用OneBot即cqhttp协议)
 * [vscode-qq](https://github.com/takayama-lily/vscode-qq) 一款vscode摸鱼插件
