@@ -1,0 +1,3 @@
+*.md linguist-language=markdown
+*.js linguist-language=js
+*.ps1 linguist-language=powershell
